@@ -1,0 +1,53 @@
+# Polymorphism & Composition Homework - Quiz
+
+# Polymorphism
+
+1. What does the ___word___ 'polymorphism' mean?
+
+    -Polymorphism is when something can take several different forms.
+
+2. What does it mean when we apply polymorphism to OO design? Give a simple Java example.
+    -In OO design, polymorphism applies to objects, which, by extentending other objects, can be considered to be have multiple forms. For example, a class of Car may extend a parent class of Vehicle. The Car can be considered to be both a Car object and a Vehicle object.
+
+        public Class Car extends Vehicle {
+            // this class of "Car" can be considered to be both a "Car" and a "Vehicle".
+        }
+
+3. What can we use to implement polymorphism in Java?
+    -We can use inheritance and composition to achieve dynamic polymorphism, or method overloading to achieve static polymorphism.
+
+4. How many 'forms' can an object take when using polymorphism?
+    -In Java, an object can extend a single parent object, but can implement any amount of interfaces, and the object can be represented as any of them.
+
+5. Give an example of when you could use polymorphism.
+    -You may want to add an instance of a Cat, a Dog and a Pig to an arrayList of Animals. Since all of these classes inherit the parent Animal class, they can be passed in as Animals, rather than the child class.
+
+
+
+# Composition and Aggregation
+
+6. What do we mean by 'composition' in reference to object-oriented programming?
+    -Composition refers to a relationship between two classes, where one is instantiated inside the other.It is usually defined as a "has a" relationship.
+
+7. When would you use composition? Provide a simple example in Java.
+    -Composition is used where the child class does not need to exist outside of the context of the parent class.
+
+         public class House(){
+             private Bathroom bathroom;
+
+             public House(){
+                 bathroom = new Bathroom("sink","toilet")
+             }
+         }
+
+8. Give a difference between composition and aggregation?
+    -In composition, the child class is created inside of the parent. In aggregation, the child class is created seperately, and then passed into the parent class.
+
+9. What is/are the advantage(s) of using composition/aggregation?
+    - composition is useful when the child class is only used within the scope of the parent class, as it keeps the scope tidy. Aggregation is useful as it means that child classes can exist outside of the scope of the parent class.
+
+10. When using composition, when an object is destroyed, what happens to all the objects it is composed of?
+    -The composed objects are destroyed.
+
+11. When using aggregation, when an object is destroyed, what happens to all the objects it is composed of?
+    -The composed objects will still exist.
